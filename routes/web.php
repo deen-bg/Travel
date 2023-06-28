@@ -15,9 +15,8 @@ use App\Http\Controllers\RouteController;
 */
 
 // Default
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [RouteController::class, 'index']);
+
 // test
 Route::get('/greeting', function () {
     return 'Hello World';
