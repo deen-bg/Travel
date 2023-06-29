@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\RapidAPIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,7 @@ Route::get('/listRouteRecommend', [RouteController::class, 'index']);
 // lists routes by id
 Route::get('/listRoutes/{id}/', [RouteController::class, 'routeList']);
 Route::get('/attraction/{id}/', [RouteController::class, 'attraction_detail']);
+
+
+// RapidAPI
+Route::get('/getChampionshipTable', [RapidAPIController::class, 'championshipTable']);
